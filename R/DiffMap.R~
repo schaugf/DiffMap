@@ -4,7 +4,7 @@
 #' @param data raw data for which diffusion coordinates are calculated
 #' @export
 
-LAFON <- function(data) {
+lafon <- function(data) {
   # Calculates a best e-value according to the Lafon method
 
   t <- as.matrix(dist(data))
@@ -19,7 +19,7 @@ LAFON <- function(data) {
 #' @param data raw data for which diffusion coordinates are calculated
 #' @export
 
-SINGER <- function(data, start, end) {
+singer <- function(data, start, end) {
   # Calculate a best e-value according to the Singer method
 
   eo <- exp(seq(log(start), log(end), length.out = 100))
@@ -43,7 +43,7 @@ SINGER <- function(data, start, end) {
 #' @param a number of steps in the diffusion Markov chain
 #' @export
 
-DiffMap <- function(data, e = LAFON(data), a = 1) {
+DiffMap <- function(data, e = lafon(data), a = 1) {
   # Calculate Diffusion Map Coordinates
   # Inputs
   # data  - n x G data frame of rows of cells and columns of genes

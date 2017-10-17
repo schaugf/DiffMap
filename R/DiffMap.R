@@ -43,7 +43,7 @@ singer <- function(data, start, end) {
 #' @param a number of steps in the diffusion Markov chain
 #' @export
 
-DiffMap <- function(data, e = lafon(data), a = 1) {
+diffmap <- function(data, e = lafon(data), a = 1) {
   # Calculate Diffusion Map Coordinates
   # Inputs
   # data  - n x G data frame of rows of cells and columns of genes

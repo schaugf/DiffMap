@@ -68,12 +68,3 @@ diffmap <- function(data, e = lafon(data), a = 1) {
   return(Em)
 }
 
-plot3d(L[,1:3],box=F)
-
-
-
-
-
-
-
-
